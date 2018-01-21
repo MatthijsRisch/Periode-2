@@ -27,7 +27,10 @@ public class PlasmaBallScript1 : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(GameObject.FindWithTag("Destroyable"));
+        if (collision.gameObject.tag == "Destroyable")
+        {
+            Destroy(collision.gameObject);
+        }
         Destroy(gameObject);
         explosionClone = Instantiate(explosion, transform.position, transform.rotation);
         Destroy(explosionClone, 2);

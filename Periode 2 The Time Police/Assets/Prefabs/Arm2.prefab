@@ -20,8 +20,24 @@ GameObject:
   m_Component:
   - component: {fileID: 4255810023629328}
   - component: {fileID: 95145804814479288}
+  - component: {fileID: 114366333968360136}
   m_Layer: 0
   m_Name: Arm2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1497551585568766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4130945339680394}
+  m_Layer: 0
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,6 +60,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4130945339680394
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497551585568766}
+  m_LocalRotation: {x: -0.023787688, y: -0.08777869, z: -0.028349066, w: 0.9954524}
+  m_LocalPosition: {x: 0.634, y: -0.51400006, z: 3.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4255810023629328}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -3, y: -10, z: -3}
 --- !u!4 &4255810023629328
 Transform:
   m_ObjectHideFlags: 1
@@ -54,6 +83,7 @@ Transform:
   m_LocalPosition: {x: -0.2390376, y: 0.024000049, z: -1.7370226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4130945339680394}
   - {fileID: 4517508939810224}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,7 +99,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4255810023629328}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 7.4790006, y: 157.84901, z: -7.163}
 --- !u!23 &23751081787577096
 MeshRenderer:
@@ -127,3 +157,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114366333968360136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243990629644028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46c26af4d448274681a706dd86ed531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrel: {fileID: 4130945339680394}
+  plasmaBall: {fileID: 1804329656834268, guid: f5fd5928c77d626419de50e5be46d785, type: 2}
+  plasmaBallClone: {fileID: 0}
+  speedBullet: 15

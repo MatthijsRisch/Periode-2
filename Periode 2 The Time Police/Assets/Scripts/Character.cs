@@ -61,5 +61,9 @@ public class Character : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         mayjump = true;
+        if (collision.gameObject.tag == ("LowGround"))
+        {
+            Application.LoadLevel("Periode 2 The Time Police");
+        }
     }
 }
