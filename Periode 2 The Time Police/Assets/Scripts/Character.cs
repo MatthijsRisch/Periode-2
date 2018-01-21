@@ -5,22 +5,26 @@ using UnityEngine;
 public class Character : MonoBehaviour {
     public Rigidbody rigidbody;
     public Vector3 movement;
-    public Vector3 jumpvector;
-    public Vector3 rondkijken;
+    public Vector3 jumpVector;
+    public Vector3 lookAround;
     public float hor;
     public float ver;
     public float speed;
     public bool run;
+    public float walkingSpeed;
+    public float runningSpeed;
     
     public bool mayjump;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         rigidbody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
         if (Input.GetButtonDown("Sprint"))
         {
             run = true;
@@ -29,30 +33,30 @@ public class Character : MonoBehaviour {
         {
             run = false;
         }
-        transform.Translate(movement * speed * Time.deltaTime);
+        transform.Translate(movement * speed);
         hor = Input.GetAxis("Horizontal");
         ver = Input.GetAxis("Vertical");
         movement.x = hor;
         movement.z = ver;
         if (run == true)
         {
-            speed = 5;
+            speed = runningSpeed;
         }
         if (run == false)
         {
-            speed = 3;
+            speed = walkingSpeed;
         }
         if (Input.GetButtonDown("Jump"))
         {
             if (mayjump == true)
             {
-                rigidbody.velocity = jumpvector;
+                rigidbody.velocity = jumpVector;
                 mayjump = false;
             }
 
         }
-        rondkijken.y -= -Input.GetAxis("Mouse X");
-        transform.eulerAngles = (new Vector3(transform.eulerAngles.x, rondkijken.y, 0.0f));
+        lookAround.y -= -Input.GetAxis("Mouse X");
+        transform.eulerAngles = (new Vector3(transform.eulerAngles.x, lookAround.y, 0.0f));
     }
     void OnCollisionEnter(Collision collision)
     {
