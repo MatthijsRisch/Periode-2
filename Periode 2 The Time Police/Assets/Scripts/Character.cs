@@ -20,7 +20,9 @@ public class Character : MonoBehaviour {
     void Start ()
     {
         rigidbody = GetComponent<Rigidbody>();
-	}
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate ()
@@ -60,7 +62,11 @@ public class Character : MonoBehaviour {
     }
     void OnCollisionEnter(Collision collision)
     {
-        mayjump = true;
+        if (collision.gameObject.tag == "Terrain")
+        {
+            mayjump = true;
+            Debug.Log("ik raak iets");
+        }
         if (collision.gameObject.tag == ("LowGround"))
         {
             Application.LoadLevel("Periode 2 The Time Police");

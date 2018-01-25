@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Destroyable
   - LowGround
+  - Terrain
   layers:
   - Default
   - TransparentFX
