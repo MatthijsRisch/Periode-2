@@ -172,6 +172,7 @@
     <Compile Include="Assets\Scripts\ArmScript.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\PlasmaBallScript1.cs" />
   </ItemGroup>
   <ItemGroup>
