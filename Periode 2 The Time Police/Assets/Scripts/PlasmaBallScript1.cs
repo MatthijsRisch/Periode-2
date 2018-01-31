@@ -31,6 +31,10 @@ public class PlasmaBallScript1 : MonoBehaviour {
         {
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == ("Enemy"))
+        {
+            Destroy(collision.gameObject);
+        }
         Destroy(gameObject);
         explosionClone = Instantiate(explosion, transform.position, transform.rotation);
         Destroy(explosionClone, 2);

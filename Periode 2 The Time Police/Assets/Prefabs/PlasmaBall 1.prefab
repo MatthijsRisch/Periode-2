@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 135012256082051968}
   m_Layer: 0
   m_Name: PlasmaBall 1
-  m_TagString: Untagged
+  m_TagString: PlasmaBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

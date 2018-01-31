@@ -27,6 +27,8 @@ public class Character : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
+        if (Input.GetKey("escape"))
+            Application.Quit();
         if (Input.GetButtonDown("Sprint"))
         {
             run = true;
@@ -68,6 +70,10 @@ public class Character : MonoBehaviour {
             Debug.Log("ik raak iets");
         }
         if (collision.gameObject.tag == ("LowGround"))
+        {
+            Application.LoadLevel("Periode 2 The Time Police");
+        }
+        if (collision.gameObject.tag == ("Enemy"))
         {
             Application.LoadLevel("Periode 2 The Time Police");
         }

@@ -7,6 +7,8 @@ TagManager:
   - Destroyable
   - LowGround
   - Terrain
+  - PlasmaBall
+  - Enemy
   layers:
   - Default
   - TransparentFX

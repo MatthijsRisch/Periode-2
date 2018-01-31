@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour {
     public Transform player;
     public int MoveSpeed = 4;
-    public int MaxDist = 10;
-    public int MinDist = 5;
+    public int MaxDist = 1;
+    public int MinDist = 1;
     public bool start;
 
     // Use this for initialization
@@ -20,18 +20,15 @@ public class EnemyScript : MonoBehaviour {
         if (start)
         {
             transform.LookAt(player);
+            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
             if (Vector3.Distance(transform.position, player.position) >= MinDist)
             {
 
-                transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+                
 
 
 
-                if (Vector3.Distance(transform.position, player.position) <= MaxDist)
-                {
-                    //Here Call any function U want Like Shoot at here or something
-                }
-
+                
             }
         }
 	}
