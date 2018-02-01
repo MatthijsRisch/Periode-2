@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  MoveSpeed: 5
-  MaxDist: 10
-  MinDist: 5
+  moveSpeed: 4
+  maxDist: 15
+  minDist: 3
   start: 0
 --- !u!135 &135574022436379246
 SphereCollider:
